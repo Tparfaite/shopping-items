@@ -4,17 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     
-    <button type="button" onclick="displayData()">show</button>
+<div class="container">
+<div class="header" id="header">
+ <div class="number1" id="number">
+    <div class="num1" id="num1">1</div>
+    <div class="phase">phase1</div>
+    <div class="line"><hr></div>
+ </div>
+
+ <div class="number1" id="number">
+    <div class="num1" id="num1">2</div>
+    <div class="phase">phase2</div>
+    <div class="line"><hr style="background-color: green;"></div>
+ </div>
+
+ <div class="number1" id="number">
+    <div class="num1" id="num1">3</div>
+    <div class="phase">phase3</div>
+    <div class="line"><hr></div>
+ </div>
+
+ <div class="number1" id="number">
+    <div class="num1" id="num1">4</div>
+    <div class="phase">phase4</div>
+    <div class="line" ><hr></div>
+ </div>
+
+ <div class="number1" id=number >
+    <div class="num1" id="num1">5</div>
+    <div class="phase">phase5</div>
+ </div>
 
 
-    <div class="container" id="container">
-       
+</div><br> <br>
+<div class="products" id="products">
+  <img src="bag.jpeg" id="bag">
+  <img src="hat.jpeg" id="hat">
+  <img src="laptop.jpg" id="laptop">
+  <img src="phone.jpeg" id="phone">
+  <img src="shoes.jpg" id="shoes">
+  <img src="cart.png" id="cart">
+</div>
+<div class="step2">step2</div>
+<div class="bottom">
+    <div class="accumulator">
+       <div class="productNum" id="productNum"></div>
+        <i class="fa fa-shopping-bag" aria-hidden="true" id="bagIcon" ></i>
     </div>
-    <script src="index.js"></script>
+    <div class="next">
+        <button input type="button" id="button">Next <i class="fa fa-arrow-right" id="arrow" aria-hidden="true"></i></button>
+    </div>
+</div>
+
+</div>
+
+
 </body>
+<script src="index.js"></script>
 </html>

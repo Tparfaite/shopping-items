@@ -1,46 +1,56 @@
+const header=document.querySelector("#header");
+const number1=document.querySelectorAll(".number1");
+const num1=document.querySelectorAll("#num1");
+
+const num=Array.from(num1);
+let productNum=document.getElementById("productNum");
+const button=document.getElementById("button");
+const arrow=document.getElementById("arrow");
+
+const bag=document.getElementById("bagIcon");
+const products=document.getElementById("products");
 
 
 
+let productNums=[];
+let productNumb=productNums.length;
 
+let currentPhase=0;
+num[currentPhase].classList.add("colorChange");
 
-// let container=document.getElementById("container");
+function items() {
 
-// let items=document.getElementById("items");
+products.addEventListener("click",e=>{
 
-// let display=document.getElementById("display");
+    let source=e.target.getAttribute("src");
+    let id=e.target.getAttribute("id");
+    function MyImage(src,id){
+      this.src=src;
+      this.id=id;
+    }
+    
+    const photo=new MyImage(source,id);
+    productNums.push(photo);
+    productNumb=productNums.length;
+    productNum.innerText=productNumb;
 
-
-// let images=document.querySelectorAll("img");
-
-const displayData=()=>{
-
-    const image=`
-<div class="items" id="items">
-<img  id="computer" src="computers.jpg" alt="computer">
-<img  id="phones"  src="phones.jpg" alt="phone">
-<img  id="shoes1" src="shoes1.jpg" alt="shoes">
-<img  id="flowers" src="flowers.jpg" alt="flower">
-<img  id="bags" src="bags.jpg" alt="shoes">
-<img  id="shoes2" src="shoes2.jpg" alt="bag">
-</div><br>
-<div class="display" id="display">
-
-</div>
-`;
-
-console.log(image);
-container.innerHTML=image; 
-displayData.innerHTML=`${id}`;
-}
-
-
- items.addEventListener("click",e=>{
-    console.log(e.target);
-  const item=e.target;
-  const id=item.getAttribute("id");
-  console.log(id);
-  display.textContent=`${id}`;
+  
 })
+
+
+}
+items();
+
+
+button.addEventListener("click",e=>{
+    currentPhase++;
+    num[currentPhase].classList.add("colorChange");
+    products.innerHTML="";
+
+
+})
+
+
 
 
 
