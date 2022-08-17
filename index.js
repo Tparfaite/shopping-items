@@ -3,6 +3,7 @@ const number1=document.querySelectorAll(".number1");
 const num1=document.querySelectorAll("#num1");
 
 const num=Array.from(num1);
+
 let productNum=document.getElementById("productNum");
 const button=document.getElementById("button");
 const arrow=document.getElementById("arrow");
@@ -13,10 +14,10 @@ const products=document.getElementById("products");
 
 
 let productNums=[];
-let productNumb=productNums.length;
 
 let currentPhase=0;
 num[currentPhase].classList.add("colorChange");
+
 
 function items() {
 
@@ -31,10 +32,8 @@ products.addEventListener("click",e=>{
     
     const photo=new MyImage(source,id);
     productNums.push(photo);
-    productNumb=productNums.length;
-    productNum.innerText=productNumb;
+    productNum.innerText=productNums.length;
 
-  
 })
 
 
@@ -47,6 +46,12 @@ button.addEventListener("click",e=>{
     num[currentPhase].classList.add("colorChange");
     products.innerHTML="";
 
+    for(let i=0;i<productNums.length;i++){
+   
+      let newSource=productNums[i].src;
+     products.innerHTML+=`<img src=${newSource}>`;
+  
+    }
 
 })
 
